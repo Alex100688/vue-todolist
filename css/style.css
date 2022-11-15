@@ -15,9 +15,10 @@
 
 .todo-box{
     width: 62.5rem;
-    display: flex;
+    height: 100%;
+     display: flex;
     flex-direction: column;
-    background-color: #eeee;
+    
 }
 /* FOR HEADER */
 header{
@@ -25,7 +26,8 @@ header{
     height: 25rem;
    display: flex;
    flex-direction: column;
-   margin-bottom: 1.25rem;
+   margin-top: 2.5rem;
+   background-color: #eeee;
 }
 .logo-list{
     margin-top: 2.5rem;
@@ -57,6 +59,7 @@ h1{
     border-radius: 5%;
     text-align: center;
 }
+/* CREO UN BOTTONE PER AGGIUNGERE ALLA LISTA LE COSE DA FARE */
 .brt-list-header{
     width: 12.5rem;
     height: 3.125rem;
@@ -68,4 +71,14 @@ h1{
     text-align: center;
     line-height:3.125rem;
     cursor: pointer;
+}
+/* CREAZIONE DEL MAIN */
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
 }
