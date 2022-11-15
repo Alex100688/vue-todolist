@@ -54,5 +54,18 @@ h1{
 .input-list{
     width: 12.5rem;
     height: 3.125rem;
+    border-radius: 5%;
+    text-align: center;
+}
+.brt-list-header{
+    width: 12.5rem;
+    height: 3.125rem;
+    border: 2px solid black;
     border-radius: 10%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 1.25rem;
+    text-align: center;
+    line-height:3.125rem;
+    cursor: pointer;
 }
