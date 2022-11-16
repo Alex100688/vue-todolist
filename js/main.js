@@ -1,26 +1,42 @@
 "use strict";
-createApp({
+const { createApp } = Vue
+
+  createApp({
     data() {
-      return {
-        todoList:[
-            {
-                list:{
-                    title: `pane`,
-                    text: `bisogna assolutamente fare la spesa`,
-                    done:true,
+        return {
+            newList:'',
+            todoList:[
+                {
+                    "list":{
+                        "text":"pane",
+                        "done":true,
+                    }
                 },
-                list:{
-                    title: `pasta`,
-                    text: `bisogna assolutamente fare la spesa`,
-                    done:true,
+                {
+                    "list":{
+                        "text":"pasta",
+                        "done":true,
+                    }
                 },
-                list:{
-                    title: `detersivo piatti`,
-                    text: `bisogna assolutamente fare la spesa`,
-                    done:true,
+                {
+                    "list":{
+                        "text":"detersivo piatti",
+                        "done":true,
+                    }
                 },
-            }
-        ]
-      }
-    }
+            ],
+        }
+            
+    },
+        methods:{
+            addList(){
+                this.todoList.push(this.newList);
+                console.log(this.todoList)
+            },
+        }
   }).mount('#app')
+
+
+
+
+

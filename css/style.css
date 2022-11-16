@@ -82,3 +82,7 @@ main{
     display: flex;
     justify-content: space-between;
 }
+ul > li{
+    list-style: none;
+    padding: .625rem .75rem;
+}

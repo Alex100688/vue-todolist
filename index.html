@@ -22,18 +22,17 @@
                             <img src="img/todolist1.jpg" alt="">
                             <h1>Todo list</h1>
                         </div>
-                        <div class="form-list">
-                            <form  action="">
-                                <input class="input-list" type="text" name="list_todo" placeholder="Inserisci qui le cose da fare">
+                        <div class="">
+                            <form class="form-list" @submit.prevent="addList">
+                                <input v-model="newList" class="input-list" type="text" name="" placeholder="Inserisci qui le cose da fare" minlength="4" maxlength="20" required>
+                                <button type="submit" class="brt-list-header" >Aggiungi</button>
+                            </div>
                             </form>
-                            <button class="brt-list-header" type="submit">Aggiungi</button>
-                        </div>
                     </header>
                     <!-- creo un elenco delle cose da fare -->
                     <main>
-                        <ul class="list">
-                            <li></li>
-                            
+                        <ul v-for="(todo, index) in todoList" class="list">
+                            <li>{{todo.list.text}}</li>       
                         </ul>
                     </main>
 
