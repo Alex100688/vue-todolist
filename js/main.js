@@ -2,39 +2,40 @@
 const { createApp } = Vue
 
   createApp({
-    data() {
-        return {
-            newList:'',
-            todoList:[
-                {
-                    "list":{
-                        "text":"pane",
-                        "done":true,
-                    }
-                },
-                {
-                    "list":{
-                        "text":"pasta",
-                        "done":true,
-                    }
-                },
-                {
-                    "list":{
-                        "text":"detersivo piatti",
-                        "done":true,
-                    }
-                },
-            ],
-        }
+        data() {
+            return {
+                newList:"",
+                todoList:[
+                    {
+                        text:"Pane",
+                        done:true,
+                    },
+                    {
+                        text:"Latte",
+                        done:false,
+                    },
+                    {
+                        text:"Biscotti",
+                        done:true,
+                    },
+                ],
+            }
             
-    },
+        },
         methods:{
             addList(){
-                this.todoList.push(this.newList);
-                console.log(this.todoList)
+                 const writeList={
+                    text: this.newList,
+                    done:true
+                 }
+                 this.todoList.push(writeList),
+                 this.newList="";  
             },
+            removeList(i){
+                this.todoList.splice(i, 1);
+            }
         }
-  }).mount('#app')
+    }).mount('#app')
 
 
 

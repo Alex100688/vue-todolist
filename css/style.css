@@ -84,5 +84,10 @@ main{
 }
 ul > li{
     list-style: none;
-    padding: .625rem .75rem;
+    padding: .62
+    5rem .75rem;
+}
+
+i{
+    cursor: pointer;
 }

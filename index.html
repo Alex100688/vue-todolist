@@ -23,7 +23,7 @@
                             <h1>Todo list</h1>
                         </div>
                         <div class="">
-                            <form class="form-list" @submit.prevent="addList">
+                            <form @submit.prevent="addList" class="form-list">
                                 <input v-model="newList" class="input-list" type="text" name="" placeholder="Inserisci qui le cose da fare" minlength="4" maxlength="20" required>
                                 <button type="submit" class="brt-list-header" >Aggiungi</button>
                             </div>
@@ -32,7 +32,8 @@
                     <!-- creo un elenco delle cose da fare -->
                     <main>
                         <ul v-for="(todo, index) in todoList" class="list">
-                            <li>{{todo.list.text}}</li>       
+                            <li>{{todo.text}}</li> 
+                            <i @click="removeList(index)" class="fa-solid fa-circle-xmark"></i>  
                         </ul>
                     </main>
 
